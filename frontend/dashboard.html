@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosso Contrato de Amor Eterno</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav class="menu" id="menu">
+    <ul>
+      <li onclick="show('gallery')">Galeria de Fotos</li>
+      <li onclick="show('timeline')">Linha do Tempo</li>
+      <li onclick="show('moments')">Momentos</li>
+      <li onclick="show('foods')">Comidinhas</li>
+      <li onclick="show('surprise')">Surpresa pra você ❤️</li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 id="title">Nosso Amor Eterno</h1>
+
+    <section id="signature" style="display:none;">
+      <h2>Assine nosso contrato, meu amor</h2>
+      <canvas id="canvas" width="500" height="250"></canvas>
+      <div>
+        <button onclick="saveSignature()">Salvar Assinatura</button>
+        <button onclick="clearSignature()">Limpar</button>
+      </div>
+    </section>
+
+    <section id="gallery" style="display:none;">
+      <h2>Galeria</h2>
+      <input type="file" id="fileFoto" accept="image/*">
+      <button onclick="add('foto')">Enviar Foto</button>
+      <div id="galleryBox"></div>
+    </section>
+
+    <section id="timeline" style="display:none;"></section>
+
+    <section id="moments" style="display:none;">
+      <h2>Momentos Especiais</h2>
+      <textarea id="textMomento" placeholder="Escreva algo lindo..."></textarea>
+      <button onclick="add('momento')">Adicionar</button>
+      <div id="momentsBox"></div>
+    </section>
+
+    <section id="foods" style="display:none;">
+      <h2>Nossas Comidinhas Favoritas</h2>
+      <input type="file" id="fileComida" accept="image/*">
+      <button onclick="add('comida')">Enviar Foto</button>
+      <div id="foodsBox"></div>
+    </section>
+
+    <div id="counter"></div>
+  </div>
+
+  <div id="surpriseModal" class="surprise">
+    <h1>Surpresa só pra você...</h1>
+    <p>Ray te ama mais que tudo no mundo. Pra sempre sua. ❤️</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
